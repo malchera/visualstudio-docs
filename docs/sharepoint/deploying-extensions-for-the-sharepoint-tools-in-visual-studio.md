@@ -2,12 +2,9 @@
 title: "Deploying Extensions for the SharePoint Tools in Visual Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/02/2017"
-ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -15,7 +12,7 @@ helpviewer_keywords:
   - "SharePoint development in Visual Studio, deploying extensions"
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload: 
   - "office"
 ---
@@ -131,13 +128,13 @@ ms.workload:
   
 8.  Locate the following `VSTemplate` element in the project file.  
   
-    ```  
+    ```xml  
     <VSTemplate Include="YourTemplateName.vstemplate">  
     ```  
   
 9. Replace this element with the following XML.  
   
-    ```  
+    ```xml  
     <VSTemplate Include="YourTemplateName.vstemplate">  
       <OutputSubPath>SharePoint\SharePoint14</OutputSubPath>  
     </VSTemplate>  
@@ -237,7 +234,7 @@ ms.workload:
 ### Example  
  The following example shows the contents of an extension.vsixmanifest file for a SharePoint tools extension. The extension is implemented in an assembly that's named Contoso.ProjectExtension.dll. The extension includes a SharePoint command assembly that's named Contoso.ExtensionCommands.dll and an item template under a folder that's named **ItemTemplates** in the VSIX package. This example assumes that both of the assemblies are in the same folder as the extension.vsixmanifest file in the VSIX package.  
   
-```  
+```xml 
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">  
   <Metadata>  
     <Identity Id="CustomActionProjectItem.Microsoft.b99efe4d-cef3-4afd-b9af-034ca0c52743" Version="1.0" Language="en-US" Publisher="Microsoft" />  

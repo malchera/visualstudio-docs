@@ -2,29 +2,24 @@
 title: "Creating Portable Profiling Data Files from the Command Line | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: "vs-ide-debug"
+ms.topic: "conceptual"
 ms.assetid: 2ceb63a7-b835-4988-b756-2afc3fcc4808
-caps.latest.revision: 6
 author: "mikejo5000"
 ms.author: "mikejo"
-manager: ghogen
+manager: douge
 ms.workload: 
   - "multiple"
 ---
-# Creating Portable Profiling Data Files from the Command Line
+# Create portable profiling data files from the command line
 To make sharing of profiling data easier, you can use the [VSPerfReport](../profiling/vsperfreport.md) command-line tool to embed the symbols for a profiling run into the .vsp file.  
   
  You can also create a pre-analyzed profiling data (.vsps) file that is smaller and is quicker to load in the IDE.  
   
 > [!NOTE]
->  Make sure the symbol (.pdb) files are available to **VSPerfReport**. For more information, see [How to: Specify Symbol File Locations from the Command Line](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md).  
+>  Make sure the symbol (.pdb) files are available to **VSPerfReport**. For more information, see [How to: Specify symbol file locations from the command line](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md).  
 >   
->  For information about the path to **VSReport**, see [Specifying the Path to Command Line Tools](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
+>  For information about the path to **VSReport**, see [Specify the path to command line tools](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
 >   
 >  The profiling data in a .vsps file cannot be filtered.  
   

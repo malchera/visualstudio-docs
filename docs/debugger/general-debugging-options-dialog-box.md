@@ -2,11 +2,7 @@
 title: "General, Debugging, Options Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/23/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
+ms.technology: "vs-ide-debug"
 ms.topic: "reference"
 f1_keywords: 
   - "vs.debug.options.General"
@@ -22,10 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "Options dialog box, debugging"
 ms.assetid: b33aee0b-43c3-4c26-8ed4-bc673f491503
-caps.latest.revision: 46
 author: "mikejo5000"
 ms.author: "mikejo"
-manager: ghogen
+manager: douge
 ms.workload: 
   - "multiple"
 ---
@@ -94,7 +89,7 @@ Tells the Visual Studio debugger to get source files from source servers that im
 - **Allow source server for partial trust assemblies (Managed only)**  
     When source server support is enabled, this setting overrides the default behavior of not retrieving sources for partial trust assemblies.  
 
-- **Enable source link support**  
+**Enable Source Link support**  
     Tells the Visual Studio debugger to download source files for .pdb files that contain Source Link information. For more information about Source Link, see the [Source Link Specification](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/source_link.md).
 
     > [!IMPORTANT]

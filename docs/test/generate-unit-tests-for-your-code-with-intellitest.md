@@ -1,12 +1,13 @@
 ---
-title: "Generate unit tests for your code with IntelliTest in Visual Studio | Microsoft Docs"
-ms.date: "2015-10-05"
+title: "Generate unit tests for your code with IntelliTest in Visual Studio"
+ms.date: 2015-10-05
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "vs.UnitTest.CreateIntelliTest"
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload: 
   - "multiple"
 author: gewarren
@@ -138,7 +139,7 @@ Specify the general relationship between inputs and outputs that you want the ge
 **A:** Yes, follow these steps to [find and install other frameworks](../test/install-third-party-unit-test-frameworks.md).
 Test framework extensions are also available in Visual Studio Marketplace:
 
-* [NUnit Extension for the Test Generators](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension)
+* [NUnit Extension for the Test Generators](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension-18371)
 * [xUnit.net Extension for the Test Generators](https://marketplace.visualstudio.com/items?itemName=BradWilson.xUnitnetTestExtensions)
 
 

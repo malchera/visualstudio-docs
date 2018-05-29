@@ -2,13 +2,9 @@
 title: "Build apps with native UI using Xamarin in Visual Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
-ms.reviewer: ""
-ms.suite: ""
 ms.technology: vs-ide-mobile
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 ms.assetid: 30f137e6-595d-4ce7-b8f5-415b07c1caa2
-caps.latest.revision: 31
 author: charlespetzold
 ms.author: chape
 manager: crdun
@@ -95,7 +91,7 @@ Visual Studio does not have a solution template for creating native UI applicati
   
     -   Click **Install**.  
   
-7.  Repeat step 7 to find and install the **Microsoft.CSharp** package in the .NET Standard project. This library is necessary to use the C# `dynamic` data type in a .NET Standard library.
+7.  Repeat step 6 to find and install the **Microsoft.CSharp** package in the .NET Standard project. This library is necessary to use the C# `dynamic` data type in a .NET Standard library.
   
 8.  Build your solution and verify that there are no build errors.  
   
@@ -144,7 +140,7 @@ Visual Studio does not have a solution template for creating native UI applicati
     {  
         public class DataService  
         {  
-            public static async Task<dynamic> getDataFromService(string queryString)  
+            public static async Task<dynamic> GetDataFromService(string queryString)  
             {  
                 HttpClient client = new HttpClient();  
                 var response = await client.GetAsync(queryString);  

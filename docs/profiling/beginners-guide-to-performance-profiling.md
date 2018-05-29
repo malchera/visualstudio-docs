@@ -1,12 +1,9 @@
 ---
-title: "Profile application performance in Visual Studio | Microsoft Docs"
-ms.custom: "H1Hack27Feb2017"
+title: "Measure CPU usage in your apps"
+description: "Analyze CPU performance issues in your application using the debugger-integrated diagnostics tools."
+ms.custom: "mvc"
 ms.date: "02/27/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
+ms.technology: "vs-ide-debug"
 ms.topic: "tutorial"
 f1_keywords: 
   - "vs.performance.wizard.intropage"
@@ -16,10 +13,9 @@ helpviewer_keywords:
   - "CPU Usage"
   - "Diagnostics Tools"
 ms.assetid: da2fbf8a-2d41-4654-a509-dd238532d25a
-caps.latest.revision: 45
 author: "mikejo5000"
 ms.author: "mikejo"
-manager: ghogen
+manager: douge
 ms.workload: 
   - "multiple"
 ---
@@ -45,7 +41,7 @@ In this tutorial, you will:
 > * Collect CPU usage data
 > * Analyze CPU usage data
   
-##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Step 1: Collect profiling data 
+## Step 1: Collect profiling data 
   
 1.  Open the project you want to debug in Visual Studio and set a breakpoint in your app at the point where you want to examine CPU usage.
 
@@ -96,7 +92,7 @@ In this tutorial, you will:
 
      At this point, you can begin to analyze the data.
 
-## <a name="Step2"></a> Step 2: Analyze CPU usage data
+## Step 2: Analyze CPU usage data
 
 We recommend that you begin analyzing your data by examining the list of functions under CPU Usage, identifying the functions that are doing the most work, and then taking a closer look at each one.
 
@@ -144,7 +140,7 @@ Here is more information on the column values:
 
 ## <a name="BKMK_External_Code"></a>View external code
 
-External code are functions in system and framework components that executed by the code you write. External code include functions that start and stop the app, draw the UI, control threading, and provide other low-level services to the app. In most cases, you won't be interested in external code, and so the CPU Usage tool gathers the external functions of a user method into one **[External Code]** node.
+External code are functions in system and framework components that are executed by the code you write. External code include functions that start and stop the app, draw the UI, control threading, and provide other low-level services to the app. In most cases, you won't be interested in external code, and so the CPU Usage tool gathers the external functions of a user method into one **[External Code]** node.
   
 If you want to view the call paths of external code, choose **Show External Code** from the **Filter view** list and then choose **Apply**.  
   
@@ -162,4 +158,4 @@ Use the search box to find a node that you are looking for, then use the horizon
 In this tutorial, you've learned how to collect and analyze CPU usage data. If you already completed the [tour of the profiler](../profiling/profiling-feature-tour.md), you may want to get a quick look at how to analyze memory usage in your apps.
 
 > [!div class="nextstepaction"]
-> [Analyze memory Usage](../profiling/memory-usage.md) 
+> [Analyze memory usage](../profiling/memory-usage.md) 

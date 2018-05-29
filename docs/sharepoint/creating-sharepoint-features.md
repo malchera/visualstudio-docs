@@ -2,12 +2,9 @@
 title: "Creating SharePoint Features | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/02/2017"
-ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -16,7 +13,7 @@ helpviewer_keywords:
   - "features [SharePoint development in Visual Studio]"
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload: 
   - "office"
 ---
@@ -40,7 +37,7 @@ ms.workload:
   
 |Property|Description|  
 |--------------|-----------------|  
-|Title|Optional. The default title of the Feature is set to *SolutionName**FeatureName*.|  
+|Title|Optional. The default title of the Feature is set to *SolutionName* *FeatureName*.|  
 |Description|Optional. The description of the SharePoint Feature.|  
 |Scope|Required. If a Feature is created by using **Solution Explorer**, the scope is set to Web by default.<br /><br /> - Farm: Activate a Feature for an entire server farm.<br /><br /> - Site: Activate a Feature for all web sites in a site collection.<br /><br /> - Web: Activate a Feature for a specific web site.<br /><br /> - WebApplication: Activate a Feature for all web sites in a web application.|  
 |Items in the Solution|All SharePoint Items that can be added to the Feature.|  

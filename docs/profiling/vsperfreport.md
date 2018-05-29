@@ -2,12 +2,8 @@
 title: "VSPerfReport | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: "vs-ide-debug"
+ms.topic: "conceptual"
 helpviewer_keywords: 
   - "command-line tools, VSPerfReporttool"
   - "performance tools, VSPerfReport tool"
@@ -16,10 +12,9 @@ helpviewer_keywords:
   - "command line, tools"
   - "instrumentation, VSPerfReporttool"
 ms.assetid: dbfd8d91-4430-4b82-81b9-97ac61412a6c
-caps.latest.revision: 32
 author: "mikejo5000"
 ms.author: "mikejo"
-manager: ghogen
+manager: douge
 ms.workload: 
   - "multiple"
 ---
@@ -28,7 +23,7 @@ VSPerfReport command line tool is used to create reports using  [!INCLUDE[vsprvs
   
  VSPerfReport uses the following syntax:  
   
-```  
+```cmd  
 VSPerfReport [/U] vspfilename [/options]  
 ```  
   
@@ -36,16 +31,16 @@ VSPerfReport [/U] vspfilename [/options]
   
  The VSPerfReport command line tool is also used to compare .vsp or .vsps files. To generate a difference ("diff") report, use the following syntax:  
   
-```  
+```cmd  
 VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]  
 ```  
   
  `vspfilename1 and vspfilename2` must be valid .vsp or .vsps files.  
   
-## Symbol Files  
+## Symbol files  
  To display symbol information such as function names and line numbers, VSPerfReport requires access to the symbol (.PDB) files of the profiled components and to Windows symbol files. For more information, see [How to: Specify Symbol File Locations from the Command Line](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md).  
   
-## General Report Options  
+## General report options  
  The following table describes the general report formatting options and the options that select the data to be reported.  
   
 |Options|Description|  
@@ -65,7 +60,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 |**NoLogo**|Hides version information when the report is running.|  
 |**UserRulesDirectory**|Specifies directory containing user-defined performance rules [Not yet implemented].|  
   
-## Filter Options  
+## Filter options  
  The following table describes the options to filter the available data.  
   
 |Options|Description|  
@@ -79,7 +74,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 |**Thread:**[*threadid*]|Only show data from the specified thread.|  
 |**Thread:**[*threadid,processid*]|Only show data from the specified thread associated with the specified process.|  
   
-## Difference Report Options  
+## Difference report options  
  The following table describes the options for comparing report files.  
   
 |Options|Description|  
@@ -90,5 +85,5 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 |**DiffColumn:**[*columnname*]|Use this specific column compare values. The default is the exclusive samples percent column.|  
 |**QueryDiffTables**|List the valid tables and columns for the two report files provided.|  
   
-## See Also  
- [Performance Report Views](../profiling/performance-report-views.md)
+## See also  
+ [Performance report views](../profiling/performance-report-views.md)

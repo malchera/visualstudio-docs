@@ -2,12 +2,9 @@
 title: "Debugging SharePoint Solutions | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/02/2017"
-ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 f1_keywords: 
   - "VS.SharePointTools.Project.WebConfigModificationDialog"
   - "VS.SharePointTools.Project.DebuggingNotEnabled"
@@ -18,7 +15,7 @@ helpviewer_keywords:
   - "SharePoint development in Visual Studio, debugging"
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload: 
   - "office"
 ---
@@ -126,11 +123,11 @@ ms.workload:
  When you debug workflow projects, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the workflow template (depending on its type) to a library or to a list. You can then start the workflow template manually or by adding or updating an item. You can then use [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] to debug the workflow.  
   
 > [!NOTE]  
->  If you add references to other assemblies, make sure that that those assemblies are installed in the global assembly cache ([!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)]). Otherwise, the workflow solution will fail. For information about how to install assemblies, see [Manually start a workflow on a document or item](http://go.microsoft.com/fwlink/?LinkID=79938).  
+>  If you add references to other assemblies, make sure that that those assemblies are installed in the global assembly cache ([!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)]). Otherwise, the workflow solution will fail. For information about how to install assemblies, see [Manually start a workflow on a document or item](https://support.office.com/article/Manually-start-a-workflow-on-a-document-or-item-5C106E0E-6FF2-4A75-AF99-F01653BC7963).  
   
  However, the deployment process does not start the workflow. You must start the workflow from the SharePoint Web site. You can also start the workflow by using a client application such as Microsoft Office Word 2010, or by using separate server-side code. Use one of the approaches specified in the **SharePoint Customization Wizard**.  
   
- For example, if you specified that the workflow can be started manually, start the workflow directly from the item in the library or list. For more information about how to start a workflow manually, see [Manually start a workflow on a document item](http://go.microsoft.com/fwlink/?LinkID=79938).  
+ For example, if you specified that the workflow can be started manually, start the workflow directly from the item in the library or list. For more information about how to start a workflow manually, see [Manually start a workflow on a document item](https://support.office.com/article/Manually-start-a-workflow-on-a-document-or-item-5C106E0E-6FF2-4A75-AF99-F01653BC7963).  
   
 ##  <a name="FeatureEvents"></a> Debugging Feature Event Receivers  
  By default, when you run a [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint application, its features are automatically activated for you on the SharePoint server. However, this causes problems when you debug feature event receivers, because when a feature is activated by [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], it runs in a different process than the debugger. This means that some debugging functionality, such as breakpoints, will not work correctly.  

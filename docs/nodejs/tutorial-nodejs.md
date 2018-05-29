@@ -1,25 +1,21 @@
 ---
-title: "Create a Node.js and Express app - Visual Studio | Microsoft Docs"
-description: In this tutorial, you create a Node.js and Express app in Visual Studio
+title: "Create a Node.js and Express app"
+description: In this tutorial, you create an app in using Node.js tools for Visual Studio
 ms.custom: ""
 ms.date: "03/13/2018"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
+ms.technology: vs-nodejs
 ms.topic: "tutorial"
 ms.devlang: javascript
 author: "mikejo5000"
 ms.author: "mikejo"
-manager: ghogen
-dev_langs: 
+manager: douge
+dev_langs:
   - JavaScript
-ms.workload: 
+ms.workload:
   - "nodejs"
 ---
 # Tutorial: Create a Node.js and Express app in Visual Studio
-In this tutorial for Visual Studio development using Node.js and Express, you create a simple Node.js web application, add some code, explore some features of the IDE, and run the app. If you haven't already installed Visual Studio, install it for free [here](http://www.visualstudio.com).  
+In this tutorial for Visual Studio development using Node.js and Express, you create a simple Node.js web application, add some code, explore some features of the IDE, and run the app. If you haven't already installed Visual Studio, install it for free [here](http://www.visualstudio.com).
 
 In this tutorial, you learn how to:
 > [!div class="checklist"]
@@ -31,7 +27,7 @@ In this tutorial, you learn how to:
 
 ## Prerequisites
 
-* You must have Visual Studio installed and the Node.js development workload.
+* You must have Visual Studio 2017 installed and the Node.js development workload.
 
     If you haven't already installed Visual Studio, install it for free [here](http://www.visualstudio.com).
 
@@ -46,13 +42,13 @@ In this tutorial, you learn how to:
 ## Create a project
 First, you'll create an Node.js web application project.
 
-1. Open Visual Studio 2017.  
+1. Open Visual Studio 2017.
 
-1. From the top menu bar, choose **File** > **New** > **Project...**.  
+1. From the top menu bar, choose **File** > **New** > **Project**.
 
-1. In the **New Project** dialog box, in the left pane, expand **JavaScript**, and then choose **Node.js**. In the middle pane, select **Basic Azure Node.js Express 4 Application**, and then choose **OK**.   
+1. In the **New Project** dialog box, in the left pane, expand **JavaScript**, and then choose **Node.js**. In the middle pane, select **Basic Azure Node.js Express 4 Application** and then choose **OK**.
 
-     If you don't see the **Basic Azure Node.js Express 4 Application** project template, you must install the **Node.js development** workload first. 
+     If you don't see the **Basic Azure Node.js Express 4 Application** project template, you must install the **Node.js development** workload first.
 
     Visual Studio creates the new solution and opens your project. The *app.js* project file opens in the editor (left pane).
 
@@ -94,6 +90,8 @@ First, you'll create an Node.js web application project.
       a: img(id='myImage' height='200' width='200' src='')
     ```
 
+    The preceding code adds markup to dynamically generate an HTML page with a title and welcome message. The page also includes code to display an image that changes whenever you press a button.
+
 1. In the routes folder, open *index.js*.
 
 1. Add the following code before the call to `router.get`:
@@ -109,6 +107,8 @@ First, you'll create an Node.js web application project.
     }
     ````
 
+    This code creates a data object that we will pass to the dynamically generated HTML page.
+
 1. Replace the `router.get` function call with the following code:
 
     ```js
@@ -116,20 +116,22 @@ First, you'll create an Node.js web application project.
         res.render('index', { title: 'Express', "data" });
     });
     ```
+    
+    The preceding code sets the current page using the Express router object and renders the page, passing the title and data object to the page.
 
-    There is an error in the line of code containing `res.render`. We need to fix it before the app can run. We fix the error in the next section.
+    To demonstrate several features of Visual Studio, we included an error in the line of code containing `res.render`. We need to fix the error before the app can run. We fix the error in the next section.
 
 ## Use IntelliSense
 
 1. In *index.js*, go to the line of code containing `res.render`.
 
-1. After the `data` string, type `: get` and IntelliSense will show you the `getData` function. Select `getData`.
+1. Put your cursor after the `data` string, type `: get` and IntelliSense will show you the `getData` function. Select `getData`.
 
-    ![Use IntelliSense](../nodejs/media/tutorial-nodejs-intellisense.png) 
+    ![Use IntelliSense](../nodejs/media/tutorial-nodejs-intellisense.png)
 
 1. Remove the comma (`,`) before `"data"` and you see green syntax highlighting on the expression. Hover over the syntax highlighting.
 
-    ![View syntax error](../nodejs/media/tutorial-nodejs-syntax-checking.png) 
+    ![View syntax error](../nodejs/media/tutorial-nodejs-syntax-checking.png)
 
     The last line of this message tells you that the JavaScript interpreter expected a comma (`,`).
 
@@ -147,15 +149,15 @@ First, you'll create an Node.js web application project.
 
     `res.render('index', { title: 'Express', "data": getData() });`
 
-    Breakpoints are the most basic and essential feature of reliable debugging. A breakpoint indicates where Visual Studio should suspend your running code so you can take a look at the values of variables, or the behavior of memory, or whether or not a branch of code is getting run. 
+    Breakpoints are the most basic and essential feature of reliable debugging. A breakpoint indicates where Visual Studio should suspend your running code so you can take a look at the values of variables, or the behavior of memory, or whether or not a branch of code is getting run.
 
-    ![Set a breakpoint](../nodejs/media/tutorial-nodejs-set-breakpoint.png) 
+    ![Set a breakpoint](../nodejs/media/tutorial-nodejs-set-breakpoint.png)
 
 ## Run the application
 
 1. Select the debug target in the Debug toolbar.
 
-    ![Select the debug target](../nodejs/media/tutorial-nodejs-deploy-target.png) 
+    ![Select the debug target](../nodejs/media/tutorial-nodejs-deploy-target.png)
 
 1. Press **F5** (**Debug** > **Start Debugging**) to run the application.
 
@@ -173,33 +175,33 @@ First, you'll create an Node.js web application project.
 
 1. Click the buttons to display different images.
 
-    ![App running in browser](../nodejs/media/tutorial-nodejs-running-in-browser.png)  
+    ![App running in browser](../nodejs/media/tutorial-nodejs-running-in-browser.png)
 
-1. Close the web browser.  
+1. Close the web browser.
 
 ## (Optional) Publish to Azure App Service
 
 1. In Solution Explorer, right-click the project and choose **Publish**.
 
-   ![Publish to Azure App Service](../nodejs/media/tutorial-nodejs-publish-to-azure.png)  
+   ![Publish to Azure App Service](../nodejs/media/tutorial-nodejs-publish-to-azure.png)
 
 1. Choose **Microsoft Azure App Service**.
 
     In the **App Service** dialog box, you can sign into your Azure account and connect to existing Azure subscriptions.
 
-1. Follow the remaining steps to select a subscription, choose or create a resource group, choose or create an app service plane, and then follow the steps when prompted to publish to Azure. For more detailed instructions, see [Publish to Azure Website using Web Deploy](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy).
+1. Follow the remaining steps to select a subscription, choose or create a resource group, choose or create an app service plane, and then follow the steps when prompted to publish to Azure. For more detailed instructions, see [Publish to Azure website using web deploy](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy).
 
 1. The **Output** window shows progress on deploying to Azure.
 
     On successful deployment, your app opens in a browser running in Azure App Service. Click a button to display an image.
 
-   ![App running in Azure App Service](../nodejs/media/tutorial-nodejs-running-in-azure.png)  
+   ![App running in Azure App Service](../nodejs/media/tutorial-nodejs-running-in-azure.png)
 
 Congratulations on completing this tutorial!
 
-## Next steps 
+## Next steps
 
 In this tutorial, you learned how to create and run a Node.js app using Express and hit a breakpoint using the debugger.
 
 > [!div class="nextstepaction"]
-> [Node.js Tools for Visual Studio](https://github.com/Microsoft/nodejstools)
+> [Node.js tools for Visual Studio](https://github.com/Microsoft/nodejstools)

@@ -2,12 +2,8 @@
 title: "CvEnterSpan Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: "vs-ide-debug"
+ms.topic: "conceptual"
 f1_keywords: 
   - "cvmarkers/CvEnterSpanVA"
   - "cvmarkers/CvEnterSpanW"
@@ -25,10 +21,9 @@ helpviewer_keywords:
   - "CvEnterSpanExVW method"
   - "CvEnterSpanExW method"
 ms.assetid: 91689e9c-6733-44b9-b36a-8b9b2eef7d1d
-caps.latest.revision: 3
 author: "mikejo5000"
 ms.author: "mikejo"
-manager: ghogen
+manager: douge
 ms.workload: 
   - "multiple"
 ---
@@ -37,7 +32,7 @@ Marks the beginning of a new span.
   
 ## Syntax  
   
-```  
+```C  
 HRESULT CvEnterSpanW(  
     _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,   
     _Out_ PCV_SPAN* ppSpan,   
@@ -116,10 +111,10 @@ HRESULT CvEnterSpanExVA(
  Valid marker series context. Cannot be NULL.  
   
  `pMessage`  
- Message format string. Cannot be NULL.  
+ Message-format string. Cannot be NULL.  
   
  `ppSpan`  
- Address of the variable which will hold resulting span object. Address cannot be NULL, the variable can have any value.  
+ Address of the variable that will hold resulting span object. Address cannot be NULL, the variable can have any value.  
   
 ## Return Value  
  S_OK when the message is successfully written. Error code in case there were any errors. Use SUCCEEDED/FAILED macros to check for error condition.  

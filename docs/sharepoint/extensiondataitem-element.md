@@ -2,12 +2,9 @@
 title: "ExtensionDataItem Element | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/02/2017"
-ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -15,16 +12,16 @@ helpviewer_keywords:
   - "ExtensionDataItem element"
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload: 
   - "office"
 ---
 # ExtensionDataItem Element
-  Represents a custom data item that is associated with the SharePoint project item, in key/value format. Both the key and value must be strings.  
+  A custom data item that is associated with the SharePoint project item, in key/value format. Both the key and value must be strings.  
   
 ## Syntax  
   
-```  
+```xml  
 <ExtensionDataItem Key = "Key of the data item"  
     Value = "Value of the data item" />  
 ```  
@@ -36,7 +33,7 @@ ms.workload:
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|**Key**|Required **xs:string** attribute.<br /><br /> The key that is used to store and retrieve the data item.|  
+|**Key**|Required **xs: string** attribute.<br /><br /> The key that is used to store and retrieve the data item.|  
 |**Value**|Required **xs:string** attribute.<br /><br /> The value of the data item.|  
   
 ### Child Elements  
@@ -49,7 +46,7 @@ ms.workload:
 |[ExtensionData](../sharepoint/extensiondata-element.md)|Represents a collection of custom data items that are associated with the SharePoint project item.|  
   
 ## Remarks  
- When you associate custom data with a SharePoint project item by using the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> property of an <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> object, Visual Studio saves the data to a new **ExtensionDataItem** element in the .spdata file for the project item. For more information, see [Saving Data in Extensions of the SharePoint Project System](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md).  
+ When you associate custom data with a SharePoint project item by using the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> property of an <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> object, Visual Studio saves the data to a new **ExtensionDataItem** element in the `.spdata` file for the project item. For more information, see [Saving Data in Extensions of the SharePoint Project System](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md).  
   
 ## Element Information  
   

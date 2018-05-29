@@ -2,12 +2,9 @@
 title: "Developing SharePoint Solutions | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/02/2017"
-ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
   - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "conceptual"
 f1_keywords: 
   - "VS.SharePointTools.Project.ProjectProperties"
   - "VS.SharePointTools.Project.ProjectItemProperties"
@@ -18,7 +15,7 @@ helpviewer_keywords:
   - "SharePoint development in Visual Studio, overview"
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload: 
   - "office"
 ---
@@ -51,7 +48,7 @@ ms.workload:
  When a feature is added to a SharePoint project, it appears in **Solution Explorer** as a node with the default name Feature*x*.feature, where *x* is a unique number. After a feature is deployed to the SharePoint Server, a SharePoint administrator can activate it, making it available to SharePoint site users.  
   
 #### Package Node  
- The **Package** node contains a single file that serves as the distribution mechanism for the SharePoint project. This file, known as a *solution**package*, is .CAB-based with a .WSP extension. A solution package is a deployable, reusable file that contains a set of features, site definitions, and assemblies that apply to SharePoint sites, and that you can enable or disable individually. The **Package** node also always contains a file that is named Package.wspdef, an [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] definition file for the package. Once a package is deployed to the server that's running SharePoint, the SharePoint administrator can install it and activate its features.  
+ The **Package** node contains a single file that serves as the distribution mechanism for the SharePoint project. This file, known as a *solution package*, is .CAB-based with a .WSP extension. A solution package is a deployable, reusable file that contains a set of features, site definitions, and assemblies that apply to SharePoint sites, and that you can enable or disable individually. The **Package** node also always contains a file that is named Package.wspdef, an [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] definition file for the package. Once a package is deployed to the server that's running SharePoint, the SharePoint administrator can install it and activate its features.  
   
  You can view or change the package's contents in the Package Designer either by double-clicking the package node or by opening its shortcut menu and then choosing **Open**. For more information, see [Creating SharePoint Solution Packages](../sharepoint/creating-sharepoint-solution-packages.md).  
   
